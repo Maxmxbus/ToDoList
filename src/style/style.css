@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+:root {
+    --f-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Content */
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    height: calc(100vh - 50px); /* Subtract footer height */
+    overflow: hidden; /* Prevent content scrolling */
+}
+
+/* Doing */
+.doing {
+    grid-area: 1 / 1 / 2 / 2;
+    border-right: 2px solid rgb(255, 0, 0);
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+/* Finished */
+.finished {
+    grid-area: 1 / 2 / 2 / 3;
+    border-left: 2px solid rgb(255, 0, 0);
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+/* Bottom Bar */
+.tab {
+    grid-area: 2 / 1 / 3 / 3;
+    border-top: 2px solid rgb(255, 0, 0);
+    background-color: white; /* Ensure it covers scrolling content */
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0;
+}
+
+#inputFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+}
+
+.taskAdder {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5px;
+    border: 1px solid black;
+}
+
+#description {
+    height: 100px;
+}
+
+#sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+/* Card styles (unchanged) */
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.card > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.fin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.fin > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#checkBox {
+    border-radius: 50px;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
+}

@@ -1,2 +1,2 @@
-# ToDoList
-A unfinished to do list app
+# ToDO
+ A lazy poorly done todo app
